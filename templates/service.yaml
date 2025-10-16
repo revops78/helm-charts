@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  labels:
+    purpose: service-demo
+spec:
+  selector:
+    purpose: deployment-demo
+    project: roboshop
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80 # service port
+      targetPort: {{ .Values.service.targetport }} # container port
