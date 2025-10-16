@@ -1,6 +1,6 @@
 deployment:
   replicas: 4
-  imageversion: latest
+  imageversion: stable-alpine3.21-perl
 
 service:
   targetPort: 80
